@@ -12,7 +12,7 @@ app = FastAPI()
 
 # Cargar datos y modelos necesarios
 def load_data():
-    data_dir = os.path.join(BASE_DIR, '../Data/')
+    data_dir = os.path.join(BASE_DIR, 'Data')
     return {
         "movies": pd.read_parquet(os.path.join(data_dir, "movies_dataset_etl.parquet")),
         "credits_cast": pd.read_parquet(os.path.join(data_dir, "cast_desanidado.parquet")),
